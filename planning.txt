@@ -1,0 +1,13 @@
+Header
+    - logo
+    - Nav Items
+
+Body
+    - Search
+    - Restaurant Container
+        - Restaurant Card
+
+Footer
+    - Copyright
+    - links
+    - Contact Info
