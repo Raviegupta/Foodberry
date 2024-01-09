@@ -20,6 +20,13 @@ h1 {
   border: 1px solid gray;
   padding: 5px 25px;
 }
+.logo-container {
+  /* border: 2px solid red; */
+  width: 100px;
+}
+.logo-container > img {
+  width: 100%;
+}
 .nav-items > ul {
   list-style-type: none;
   /* border: 2px solid red; */
