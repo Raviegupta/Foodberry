@@ -40,7 +40,7 @@ h1 {
 
 .res-card {
     width: 270px;
-    /* height: 250px; */
+    /* height: 350px; */
     padding: 3px;
     padding-bottom: 12px;
 }
@@ -72,4 +72,10 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+}
+
+
+.res-logo-container > img {
+    aspect-ratio: 1.35;
+    /* border-radius: 20px; */
 }
