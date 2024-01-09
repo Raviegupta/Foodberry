@@ -39,9 +39,10 @@ h1 {
 
 
 .res-card {
-    width: 220px;
-    height: 250px;
+    width: 270px;
+    /* height: 250px; */
     padding: 3px;
+    padding-bottom: 12px;
 }
 .res-logo {
     width: 100%;
@@ -51,6 +52,7 @@ h1 {
     color: #02060CBF;
     font-size: 20px;
     margin: -5px 0;
+    padding-left: 5px;
 }
 .res-card > p {
     color: #02060C99;
@@ -58,14 +60,16 @@ h1 {
     font-size: 18px;
     /* border: 2px solid red; */
     margin: -5px 0;
+    padding-left: 5px;
 }
 .res-card:hover {
     border: 1px solid rgb(202, 172, 172);
     cursor: pointer;
+    scale: 0.95;
 }
 .res-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 }

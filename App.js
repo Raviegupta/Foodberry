@@ -25,29 +25,31 @@ const Header = () => {
 
 // const styleCard = ;
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
+    const {resName, cuisines} = props;
     return (
         <div className='res-card' style={{backgroundColor: '#f0f0f0'}}>
             <img className='res-logo' src={pizza} alt="pizza image" />
-            <h3>Domino's Pizza</h3>
+            <h3>{resName}</h3>
             <h3>
                 <span>4.4 stars </span>
                 <span>30 min</span>
             </h3>
-            <p>Pizzas, Italian, Pastas</p>
+            <p>{cuisines}</p>
             <p>Lalpur</p>
         </div>
     )
 }
+
 
 const Body = () => {
     return (
         <div className='body'>
             <div className='search'> </div>
             <div className='res-container'>
-                <RestaurantCard />
-                <RestaurantCard />
-                <RestaurantCard />
+                <RestaurantCard resName='Meghna Food' cuisines='North Indian, Chinese' />
+                <RestaurantCard resName='KFC' cuisines='Burger, Fast Food, Snacks' />
+                <RestaurantCard resName="Domino's Pizza" cuisines='Pizzas, Italian, Pastas'  />
                 <RestaurantCard />
                 <RestaurantCard />
                 <RestaurantCard />
