@@ -6,6 +6,9 @@ Body
     - Search
     - Restaurant Container
         - Restaurant Card
+            - image
+            - Name of Restaurant, star-rating, Cuisine, delivery time etc
+            
 
 Footer
     - Copyright
