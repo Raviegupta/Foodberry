@@ -45,6 +45,21 @@ h1 {
 }
 
 
+/* Body Styling */
+.top-rated-res-filter-btn {
+  background-color: #f0f0f0;
+  font-size: 18px;
+  color: #02060C99;
+  font-weight: 600;
+  margin-left: 90px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+
 .res-card {
     width: 270px;
     /* height: 350px; */
