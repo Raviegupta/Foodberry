@@ -101,3 +101,18 @@ h1 {
     aspect-ratio: 1.35;
     /* border-radius: 20px; */
 }
+
+/* Shimmer Styling */
+.shimmer-card {
+  width: 270px;
+  height: 320px;
+  background-color: #f0f0f0;
+  /* border: 2px solid red; */
+}
+.shimmer-card-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
