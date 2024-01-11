@@ -26,11 +26,11 @@ const Body = () => {
 
   console.log('Hello')
 
-  if(listOfRestaurant.length == 0) {
-    return <h1>Loading...</h1>
-  }
+  // if(listOfRestaurant.length == 0) {
+  //   return <h1>Loading...</h1>
+  // }
 
-  return (
+  return listOfRestaurant.length == 0 ? <h1>Loading...</h1> : (
     <div className="body">
       <div className="filter">
         <button
