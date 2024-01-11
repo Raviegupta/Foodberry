@@ -15,7 +15,8 @@ const Body = () => {
     
     console.log(json);
     console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
-    const liveResList = json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
+    // optioal chaining
+    const liveResList = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     setListOfRestaurant(liveResList)
   }
 
