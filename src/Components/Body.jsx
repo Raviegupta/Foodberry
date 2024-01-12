@@ -3,10 +3,11 @@ import resList from "../utils/mockData";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
-let liveResList;
+// let liveResList;
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState([]);
+  const [filterdRestaurant, setFilteredRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
 
   // whenever state variable update, react triggers a reconciliation cycle(re-renders the component)
@@ -32,6 +33,7 @@ const Body = () => {
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
     setListOfRestaurant(liveResList);
+    setFilteredRestaurant(liveResList);
   };
 
   useEffect(() => {
@@ -56,7 +58,6 @@ const Body = () => {
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
-              // setListOfRestaurant(liveResList);
             }}
           />
           <button
@@ -64,10 +65,10 @@ const Body = () => {
             onClick={() => {
               // Filter the restaurant card and updates the list of cards
               // searchText
-              const filteredList = liveResList.filter((res) =>
+              const filteredList = listOfRestaurant.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              setListOfRestaurant(filteredList);
+              setFilteredRestaurant(filteredList)
             }}
           >
             Search
@@ -76,10 +77,10 @@ const Body = () => {
         <button
           className="top-rated-res-filter-btn"
           onClick={() => {
-            const filteredList = liveResList.filter(
+            const filteredList = listOfRestaurant.filter(
               (res) => res.info.avgRating >= 4.5
             );
-            setListOfRestaurant(filteredList);
+            setFilteredRestaurant(filteredList)
           }}
         >
           Top Rated Restaurants
@@ -87,15 +88,15 @@ const Body = () => {
         <button
           className="top-rated-res-filter-btn"
           onClick={() => {
-            const filteredLists = liveResList.map((res) => res);
-            setListOfRestaurant(filteredLists);
+            const filteredList = listOfRestaurant.map((res) => res);
+            setFilteredRestaurant(filteredList)
           }}
         >
           Show All Restaurants
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurant.map((restau, index) => (
+        {filterdRestaurant.map((restau, index) => (
           <RestaurantCard key={restau.info.id} resData={restau} />
         ))}
       </div>
