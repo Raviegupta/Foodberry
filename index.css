@@ -46,17 +46,33 @@ h1 {
 
 
 /* Body Styling */
-.top-rated-res-filter-btn {
+.filter {
+  margin: 30px 90px;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.search {
+  /* border: 2px solid; */
+  width: 25%;
+}
+.search-box {
+  width: 70%;
+  padding: 0px 5px 3px;
+  height: 100%;
+  font-size: 20px;
+}
+
+.top-rated-res-filter-btn, .search-btn {
   background-color: #f0f0f0;
   font-size: 18px;
   color: #02060C99;
   font-weight: 600;
-  margin-left: 90px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 5px 10px;
+  padding: 3px 10px 7px;
   border: none;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 
