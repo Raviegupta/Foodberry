@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter, Outlet } from 'react-router-dom'
 import About from './src/Pages/About'
 import Contact from './src/Pages/Contact'
 import Error from './src/Pages/Error'
+import RestaurantMenu from './src/Pages/RestaurantMenu'
 
 // const heading = <h1>Foodberry App</h1>
 
@@ -36,6 +37,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/contact",
                 element: <Contact />
+            },
+            {
+                path: "/restaurants/:resId",
+                element: <RestaurantMenu />
             }
         ],
         errorElement: <Error />
